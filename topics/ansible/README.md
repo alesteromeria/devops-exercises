@@ -109,7 +109,7 @@ spun up and shut down, without you tracking every change in these sources.
 #### Ansible - Variables
 
 <details>
-<summary>Modify the following task to use a variable instead of the value "zlib" and have "zlib" as the default in case the variable is not defined
+<summary><b>Modify the following task to use a variable instead of the value "zlib" and have "zlib" as the default in case the variable is not defined
 
 ```
 - name: Install a package
@@ -117,7 +117,7 @@ spun up and shut down, without you tracking every change in these sources.
     name: "zlib"
     state: present
 ```
-</summary><br><b>
+</b></summary><br><b>
 
 ```
 - name: Install a package
@@ -174,7 +174,7 @@ when the environment variable 'BEST_YEAR' is empty or false.
 </b></details>
 
 <details>
-<summary>If the value of certain variable is 1, you would like to use the value "one", otherwise, use "two". How would you do it?</summary><br><b>
+<summary><b>If the value of certain variable is 1, you would like to use the value "one", otherwise, use "two". How would you do it?</b></summary><br><b>
 
 `{{ (certain_variable == 1) | ternary("one", "two") }}`
 </b></details>
@@ -301,14 +301,14 @@ I'm {{ ansible_hostname }} and my operating system is {{ ansible_distribution }
 </b></details>
 
 <details>
-<summary>The variable 'whoami' defined in the following places:
+<summary><b>The variable 'whoami' defined in the following places:
 
   * role defaults -> whoami: mario
   * extra vars (variables you pass to Ansible CLI with -e) -> whoami: toad
   * host facts -> whoami: luigi
   * inventory variables (doesn’t matter which type) -> whoami: browser
 
-According to variable precedence, which one will be used?</summary><br><b>
+According to variable precedence, which one will be used?</b></summary><br><b>
 
 The right answer is ‘toad’.
 

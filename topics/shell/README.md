@@ -20,7 +20,7 @@
 ## Shell Scripting - Self Assessment
 
 <details>
-<summary>What does this line in shell scripts means?: <code>#!/bin/bash</code></summary><br><b>
+<summary><s>What does this line in shell scripts means?: <code>#!/bin/bash</code></s></summary><br><b>
 
 
 `#!/bin/bash` is She-bang
@@ -39,7 +39,9 @@ Most of the time we might actually want the opposite to happen. In order to make
 </b></details>
 
 <details>
-<summary>What do you tend to include in every script you write?</summary><br><b>
+<summary><s>What do you tend to include in every script you write?</s></summary><br><b>
+
+<span style="color:green;" >generate log with date and time in a file </span>
 
 Few example:
 
@@ -50,7 +52,18 @@ You can have an entirely different answer. It's based only on your experience an
 </b></details>
 
 <details>
-<summary>Today we have tools and technologies like Ansible, Puppet, Chef, ... Why would someone still use shell scripting?</summary><br><b>
+<summary><s>Today we have tools and technologies like Ansible, Puppet, Chef, ... Why would someone still use shell scripting?</s></summary><br><b>
+
+<span style="color:green;"> 
+
+- it doesn't need any agent 
+
+- it doesn't need any special requerment or modules
+
+- you can use it in airgap systems without any installation
+
+</span>
+
 
   * Speed
   * Flexibility
@@ -61,19 +74,19 @@ You can have an entirely different answer. It's based only on your experience an
 #### Shell Scripting - Variables
 
 <details>
-<summary>How to define a variable with the value "Hello World"?</summary><br><b>
+<summary><s>How to define a variable with the value "Hello World"?</s></summary><br><b>
 
 `HW="Hello World`
 </b></details>
 
 <details>
-<summary>How to define a variable with the value of the current date?</summary><br><b>
+<summary><s>How to define a variable with the value of the current date?</s></summary><br><b>
 
 `DATE=$(date)`
 </b></details>
 
 <details>
-<summary>How to print the first argument passed to a script?</summary><br><b>
+<summary><s>How to print the first argument passed to a script?</s></summary><br><b>
 
 `echo $1`
 </b></details>

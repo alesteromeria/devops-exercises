@@ -62,7 +62,10 @@
 ### Containers 101
 
 <details>
-<summary>What is a Container?</summary><br><b>
+<summary><s>What is a Container?</s></summary><br><b>
+<span style="color:green;" >
+A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing.
+</span>
 
 This can be tricky to answer since there are many ways to create a containers:
 
@@ -74,13 +77,13 @@ If to focus on OCI (Open Container Initiative) based containers, it offers the f
 </b></details>
 
 <details>
-<summary>Why containers are needed? What is their goal?</summary><br><b>
+<summary><s>Why containers are needed? What is their goal?</s></summary><br><b>
 
 OCI provides a good [explanation](https://github.com/opencontainers/runtime-spec/blob/master/principles.md#the-5-principles-of-standard-containers): "Define a unit of software delivery called a Standard Container. The goal of a Standard Container is to encapsulate a software component and all its dependencies in a format that is self-describing and portable, so that any compliant runtime can run it without extra dependencies, regardless of the underlying machine and the contents of the container."
 </b></details>
 
 <details>
-<summary>What is a container image?</summary><br><b>
+<summary><s>What is a container image?</s></summary><br><b>
 
 * An image of a container contains the application, its dependencies and the operating system where the application is executed.<br>
 * It's a collection of read-only layers. These layers are loosely coupled
@@ -88,7 +91,7 @@ OCI provides a good [explanation](https://github.com/opencontainers/runtime-spec
 </b></details>
 
 <details>
-<summary>How are containers different from virtual machines (VMs)?</summary><br><b>
+<summary><s>How are containers different from virtual machines (VMs)?</s></summary><br><b>
 
 The primary difference between containers and VMs is that containers allow you to virtualize
 multiple workloads on a single operating system while in the case of VMs, the hardware is being virtualized to run multiple machines each with its own guest OS.
@@ -101,7 +104,7 @@ You can also think about it as containers are for OS-level virtualization while 
 </b></details>
 
 <details>
-<summary>In which scenarios would you use containers and in which you would prefer to use VMs?</summary><br><b>
+<summary><s>In which scenarios would you use containers and in which you would prefer to use VMs?</s></summary><br><b>
 
 You should choose VMs when:
   * You need run an application which requires all the resources and functionalities of an OS
@@ -945,7 +948,7 @@ Applied tar sha256:514c3a3e64d4ebf15f482c9e8909d130bcd53bcc452f0225b0a04744de7b8
 </b></details>
 
 <details>
-<summary>Describe in detail what happens when you run a container</summary><br><b>
+<summary><b>Describe in detail what happens when you run a container</b></summary><br><b>
 
 1. The Docker client converts the run command into an API payload
 2. It then POST the payload to the API endpoint exposed by the Docker daemon
@@ -975,7 +978,7 @@ False. Once a container is created, the parent runc process exists.
 </b></details>
 
 <details>
-<summary>What is shim in regards to Docker?</summary><br><b>
+<summary><b>What is shim in regards to Docker?</b></summary><br><b>
 
 shim is the process that becomes the container's parent when runc process exists. It's responsible for:
 
@@ -1058,7 +1061,7 @@ In general, it's useful for running applications which composed out of several d
 </b></details>
 
 <details>
-<summary>Explain Multi-stage builds</summary><br><b>
+<summary><b>Explain Multi-stage builds</b></summary><br><b>
 
 Multi-stages builds allow you to produce smaller container images by splitting the build process into multiple stages.
 

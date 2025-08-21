@@ -699,8 +699,10 @@ ISP (Internet Service Provider) is the local internet company provider.
 ### Operating System - Self Assessment
 
 <details>
-<summary>What is an operating system?</summary><br><b>
+<summary><s>What is an operating system?</s></summary><br><b>
+<span style="color: green;">An operating system (OS) is a software program that manages hardware and software resources, and provides common services for computer programs. its a interface between hardware and software that can talk to both of them</span>
 
+<br>
 From the book "Operating Systems: Three Easy Pieces":
 
 "responsible for making it easy to run programs (even allowing you to seemingly run many at the same time), allowing programs to share memory, enabling programs to interact with devices, and other fun stuff like that".
@@ -715,7 +717,7 @@ A process is a running program. A program is one or more instructions and the pr
 </b></details>
 
 <details>
-<summary>If you had to design an API for processes in an operating system, what would this API look like?</summary><br><b>
+<summary><s>If you had to design an API for processes in an operating system, what would this API look like?</s></summary><br><b>
 
 It would support the following:
 
@@ -726,7 +728,7 @@ It would support the following:
 </b></details>
 
 <details>
-<summary>How a process is created?</summary><br><b>
+<summary><s>How a process is created?</s></summary><br><b>
 
 * The OS is reading program's code and any additional relevant data
 * Program's code is loaded into the memory or more specifically, into the address space of the process.
@@ -737,13 +739,24 @@ It would support the following:
 </b></details>
 
 <details>
-<summary>True or False? The loading of the program into the memory is done eagerly (all at once)</summary><br><b>
+<summary><s>True or False? The loading of the program into the memory is done eagerly (all at once)</s></summary><br><b>
+
+<span style="color: green;">
+False. The loading of a program into memory can be done in two main ways: eagerly (all at once) and lazily (on-demand).
+
+Eager Loading: In eager loading, the entire program is loaded into memory all at once before it begins execution. This approach results in faster program startup times but may consume more memory, which could be inefficient for large programs.
+
+Lazy Loading (On-Demand Loading): In lazy loading, only the essential parts of the program are loaded into memory initially, and additional portions are loaded as needed during the program's execution. This approach conserves memory but might lead to slightly longer startup times as sections of the program are loaded on demand.
+
+The choice between these loading strategies depends on the design of the operating system and the specific needs of the program being loaded. So, it's not accurate to say that all program loading is done eagerly; it depends on the circumstances and design choices.</span>
 
 False. It was true in the past but today's operating systems perform lazy loading which means only the relevant pieces required for the process to run are loaded first.
 </b></details>
 
 <details>
-<summary>What are different states of a process?</summary><br><b>
+<summary><s>What are different states of a process?</s></summary><br><b>
+
+<img src="states_modified.png" alt="Process States Image">
 
 * Running - it's executing instructions
 * Ready - it's ready to run but for different reasons it's on hold
@@ -839,13 +852,13 @@ Cache: Cache is usually used when processes reading and writing to the disk to m
 ## Virtualization
 
 <details>
-<summary>What is Virtualization?</summary><br><b>
+<summary><s>What is Virtualization?</s></summary><br><b>
 
 Virtualization uses software to create an abstraction layer over computer hardware that allows the hardware elements of a single computer—processors, memory, storage and more - to be divided into multiple virtual computers, commonly called virtual machines (VMs).
 </b></details>
 
 <details>
-<summary>What is a hypervisor?</summary><br><b>
+<summary><s>What is a hypervisor?</s></summary><br><b>
 
 Red Hat: "A hypervisor is software that creates and runs virtual machines (VMs). A hypervisor, sometimes called a virtual machine monitor (VMM), isolates the hypervisor operating system and resources from the virtual machines and enables the creation and management of those VMs."
 
@@ -853,14 +866,41 @@ Read more [here](https://www.redhat.com/en/topics/virtualization/what-is-a-hyper
 </b></details>
 
 <details>
-<summary>What types of hypervisors are there?</summary><br><b>
+<summary><s>What types of hypervisors are there?</s></summary><br><b>
 
 Hosted hypervisors and bare-metal hypervisors.
 </b></details>
 
 <details>
-<summary>What are the advantages and disadvantges of bare-metal hypervisor over a hosted hypervisor?</summary><br><b>
+<summary><s>What are the advantages and disadvantges of bare-metal hypervisor over a hosted hypervisor?</s></summary><br><b>
+<span style="color: green;">
+Bare-Metal Hypervisors:
 
+Advantages:
+
+Better performance due to direct hardware access.
+Fine-grained resource control.
+Strong isolation for sensitive workloads.
+Greater stability with no host OS contention.
+Disadvantages:
+
+More complex to set up and manage.
+Requires powerful hardware.
+Typically not suitable for desktop use.
+Hosted Hypervisors:
+
+Advantages:
+
+Easy to set up and run on existing OS.
+Hardware-agnostic, suitable for testing and development.
+Resource sharing with the host OS.
+Can be used on desktops and workstations.
+Disadvantages:
+
+Performance overhead due to running on top of an OS.
+Limited isolation, less suitable for high-security environments.
+Resource contention between the host OS and VMs.
+</span>
 Due to having its own drivers and a direct access to hardware components, a baremetal hypervisor will often have better performances along with stability and scalability.
 
 On the other hand, there will probably be some limitation regarding loading (any) drivers so a hosted hypervisor will usually benefit from having a better hardware compatibility.
@@ -875,13 +915,13 @@ Desktop virtualization
 </b></details>
 
 <details>
-<summary>Is containerization is a type of Virtualization?</summary><br><b>
+<summary><s>Is containerization is a type of Virtualization?</s></summary><br><b>
 
 Yes, it's a operating-system-level virtualization, where the kernel is shared and allows to use multiple isolated user-spaces instances.
 </b></details>
 
 <details>
-<summary>How the introduction of virtual machines changed the industry and the way applications were deployed?</summary><br><b>
+<summary><s>How the introduction of virtual machines changed the industry and the way applications were deployed?</s>></summary><br><b>
 
 The introduction of virtual machines allowed companies to deploy multiple business applications on the same hardware while each application is separated from each other in secured way, where each is running on its own separate operating system.
 </b></details>
@@ -889,7 +929,7 @@ The introduction of virtual machines allowed companies to deploy multiple busine
 #### Virtual Machines
 
 <details>
-<summary>Do we need virtual machines in the age of containers? Are they still relevant?</summary><br><b>
+<summary><s>Do we need virtual machines in the age of containers? Are they still relevant?</s></summary><br><b>
 
 Yes, virtual machines are still relevant even in the age of containers. While containers provide a lightweight and portable alternative to virtual machines, they do have certain limitations. Virtual machines still matter because they offer isolation and security, can run different operating systems, and are good for legacy apps. Containers limitations for example are sharing the host kernel.
 </b></details>

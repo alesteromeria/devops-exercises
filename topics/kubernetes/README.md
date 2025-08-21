@@ -119,7 +119,7 @@ What's your goal?
 ### Kubernetes 101
 
 <details>
-<summary>What is Kubernetes? Why organizations are using it?</summary><br><b>
+<summary><s>What is Kubernetes? Why organizations are using it?</s></summary><br><b>
 
 Kubernetes is an open-source system that provides users with the ability to manage, scale and deploy containerized applications.
 
@@ -132,7 +132,7 @@ To understand what Kubernetes is good for, let's look at some examples:
 </b></details>
 
 <details>
-<summary>When or why NOT to use Kubernetes?</summary><br><b>
+<summary><s>When or why NOT to use Kubernetes?</s></summary><br><b>
 
   - If you manage low level infrastructure or baremetals, Kubernetes is probably not what you need or want
   - If you are a small team (like less than 20 engineers) running less than a dozen of containers, Kubernetes might be an overkill (even if you need scale, rolling out updates, etc.). You might still enjoy the benefits of using managed Kubernetes, but you definitely want to think about it carefully before making a decision on whether to adopt it.

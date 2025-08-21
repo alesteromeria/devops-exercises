@@ -77,7 +77,7 @@ Disclaimer: developed by repository owner
 </b></details>
 
 <details>
-<summary>Explain what each of the following commands does and give an example on how to use it:
+<summary><s>Explain what each of the following commands does and give an example on how to use it:
 
   * touch
   * ls
@@ -87,7 +87,7 @@ Disclaimer: developed by repository owner
   * mkdir
   * pwd
   * cd
-</summary><br><b>
+</s></summary><br><b>
 
   * touch - update file's timestamp. More commonly used for creating files
   * ls - listing files and directories
@@ -100,7 +100,7 @@ Disclaimer: developed by repository owner
 </b></details>
 
 <details>
-<summary>What each of the following commands does?
+<summary><s>What each of the following commands does?
 
   * cd /
   * cd ~
@@ -108,7 +108,7 @@ Disclaimer: developed by repository owner
   * cd ..
   * cd .
   * cd -
-</summary><br><b>
+</s></summary><br><b>
 
   * cd / -> change to the root directory
   * cd ~ -> change to your home directory
@@ -134,20 +134,20 @@ To list all the files, one can run `ls -R /dir1`
 </b></details>
 
 <details>
-<summary>Explain each field in the output of `ls -l` command</summary><br><b>
+<summary><s>Explain each field in the output of `ls -l` command</s></summary><br><b>
 It shows a detailed list of files in a long format. From the left:
 
 * file permissions, number of links, owner name, owner group, file size, timestamp of last modification and directory/file name
 </b></details>
 
 <details>
-<summary>What are hidden files/directories? How to list them?</summary><br><b>
+<summary><s>What are hidden files/directories? How to list them?</s></summary><br><b>
 
 These are files directly not displayed after performing a standard ls direct listing. An example of these files are .bashrc which are used to execute some scripts. Some also store configuration about services on your host like .KUBECONFIG. The command used to list them is, `ls -a`
 </b></details>
 
 <details>
-<summary>What do > and < do in terms of input and output for programs?</summary><br><b>
+<summary><s>What do > and < do in terms of input and output for programs?</s></summary><br><b>
 They take in input (<) and output for a given file (>) using stdin and stdout.
 
 `myProgram < input.txt > executionOutput.txt`
@@ -175,19 +175,19 @@ extracting a specific field from a CSV file: awk -F ',' '{print $1}' file.csv, o
 </b></details>
 
 <details>
-<summary>How to rename the name of a file or a directory?</summary><br><b>
+<summary><s>How to rename the name of a file or a directory?</s></summary><br><b>
 
 Using the `mv` command.
 </b></details>
 
 <details>
-<summary>Specify which command would you use (and how) for each of the following scenarios 
+<summary><s>Specify which command would you use (and how) for each of the following scenarios 
 
   * Remove a directory with files
   * Display the content of a file
   * Provides access to the file /tmp/x for everyone
   * Change working directory to user home directory
-  * Replace every occurrence of the word "good" with "great" in the file /tmp/y</summary><br><b>
+  * Replace every occurrence of the word "good" with "great" in the file /tmp/y</s></summary><br><b>
 
   - `rm -rf dir`
   - `cat or less`
@@ -197,26 +197,26 @@ Using the `mv` command.
 </b></details>
 
 <details>
-<summary>How can you check what is the path of a certain command?</summary><br><b>
+<summary><s>How can you check what is the path of a certain command?</s></summary><br><b>
 
   * whereis
   * which
 </b></details>
 
 <details>
-<summary>What is the difference between these two commands? Will it result in the same output?
+<summary><s>What is the difference between these two commands? Will it result in the same output?
 
 ```
 echo hello world
 echo "hello world"
 ```
-</summary><br><b>
+</s></summary><br><b>
 
 The echo command receives two separate arguments in the first execution and in the second execution it gets one argument which is the string "hello world". The output will be the same.
 </b></details>
 
 <details>
-<summary>Explain piping. How do you perform piping?</summary><br><b>
+<summary><s>Explain piping. How do you perform piping?</s></summary><br><b>
 
 Using a pipe in Linux, allows you to send the output of one command to the input of another command. For example: `cat /etc/services | wc -l`
 </b></details>
@@ -235,7 +235,7 @@ find . -iname "*.yaml" -exec sed -i "s/1/2/g" {} \;
 </b></details>
 
 <details>
-<summary>How to check which commands you executed in the past?</summary><br><b>
+<summary><s>How to check which commands you executed in the past?</s></summary><br><b>
 
 history command or .bash_history file 
   * also can use up arrow key to access or to show the recent commands you type
@@ -325,20 +325,36 @@ The file `die_hard` will not be created
 ### Filesystem Hierarchy Standard
 
 <details>
-<summary>In Linux FHS (Filesystem Hierarchy Standard) what is the <code>/</code>?</summary><br><b>
+<summary><s>In Linux FHS (Filesystem Hierarchy Standard) what is the </s><code>/</code>?</summary><br><b>
 
 The root of the filesystem. The beginning of the tree.
 </b></details>
 
 <details>
-<summary>What is stored in each of the following paths?
+<summary><s>What is stored in each of the following paths?
 
   - /bin, /sbin, /usr/bin and /usr/sbin
   - /etc
   - /home
   - /var
-  - /tmp</summary><br><b>
+  - /tmp</s></summary><br><b>
+<span style="color:green;" >
+/bin --> binary file of execution command in linux like cd
 
+/sbin --> like bin but need superuser to execute these command like adduser
+
+/lib --> libraries that executable from bin and sbin used
+
+/usr --> belong to user, duplicated binary directories like bin and sbin , historical reason
+
+/usr/local --> program that users install, available for ALL users.
+
+difference between opt and usr/local?
+in /opt install program that theire component are NOT SPLIT.
+
+/etc --> system configuration like network , ...
+
+</span>
   * binaries
   * configuration files
   * home directories of the different users
@@ -347,13 +363,13 @@ The root of the filesystem. The beginning of the tree.
 </b></details>
 
 <details>
-<summary>What is special about the /tmp directory when compared to other directories?</summary><br><b>
+<summary><s>What is special about the /tmp directory when compared to other directories?</s></summary><br><b>
 
 `/tmp` folder is cleaned automatically, usually upon reboot.
 </b></details>
 
 <details>
-<summary>What kind of information one can find in /proc?</summary><br><b>
+<summary><s>What kind of information one can find in /proc?</s></summary><br><b>
  
 It contains useful information about the processes that are currently running, it is regarded as control and information center for kernel.
 </b></details>
@@ -375,25 +391,33 @@ The command passed to the boot loader to run the kernel
 </b></details>
 
 <details>
-<summary>In which path can you find the system devices (e.g. block storage)?</summary><br><b>
+<summary><s>In which path can you find the system devices (e.g. block storage)</s >?</summary><br><b>
   /dev
 </b></details>
 
 <a name="questions-linux-permissions"></a>
 ### Permissions
-
 <details>
-<summary>How to change the permissions of a file?</summary><br><b>
+<summary><s> How many kind of users exist in linux?</s></summary
+
+- superuser like root
+- regular users (for administrative task need to run as root)
+- service users like mysql user
+
+</details><br></b>
+
+
+<details><summary><s>How to change the permissions of a file?</s></summary><br><b>
 
 Using the `chmod` command.
 </b></details>
 
 <details>
-<summary>What does the following permissions mean?:
+<summary><s>What does the following permissions mean?:
 
   * 777
   * 644
-  * 750</summary><br><b>
+  * 750</s></summary><br><b>
 
 <pre>
 777 - You give the owner, group and other: Execute (1), Write (2) and Read (4); 4+2+1 = 7.
@@ -403,7 +427,7 @@ Using the `chmod` command.
 </b></details>
 
 <details>
-<summary>What this command does? <code>chmod +x some_file</code></summary><br><b>
+<summary><s>What this command does? <code>chmod +x some_file</code></s></summary><br><b>
 It adds execute permissions to all sets i.e user, group and others
 </b></details>
 
@@ -420,11 +444,11 @@ Its a bit that only allows the owner or the root user to delete or modify the fi
 </b></details>
 
 <details>
-<summary>What the following commands do?
+<summary><s>What the following commands do?
 
   - chmod
   - chown
-  - chgrp</summary><br><b>
+  - chgrp</s></summary><br><b>
 
   * chmod - changes access permissions to files system objects
   * chown - changes the owner of file system files and directories
@@ -436,7 +460,7 @@ Its a bit that only allows the owner or the root user to delete or modify the fi
 </b></details>
 
 <details>
-<summary>True or False? In order to install packages on the system one must be the root user or use the sudo command</summary><br><b>
+<summary><s>True or False? In order to install packages on the system one must be the root user or use the sudo command</s></summary><br><b>
 
 True
 </b></details>
@@ -446,7 +470,7 @@ True
 </b></details>
 
 <details>
-<summary>You try to create a file but it fails. Name at least three different reason as to why it could happen</summary><br><b>
+<summary><s>You try to create a file but it fails. Name at least three different reason as to why it could happen</s></summary><br><b>
 
 * No more disk space
 * No more inodes
